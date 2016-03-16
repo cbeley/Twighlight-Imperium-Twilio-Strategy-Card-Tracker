@@ -23,7 +23,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "browserify client/index.js -o client/static/js/app.js -t [ babelify ] -t browserify-handlebars"
+    "build": "browserify client/index.js -o client/static/js/app.js -t [ babelify ] -t browserify-handlebars",
+    "start": "DEBUG=TIServer ENVIRONMENT=development node --use_strict ./bin/server"
   },
   "repository": {
     "type": "git",

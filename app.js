@@ -4,11 +4,12 @@ const errorhandler = require('errorhandler');
 const bodyParser = require('body-parser');
 
 const gameDB = require('./lib/gameDB');
+const config = require('./config.json');
 
 module.exports = function () {
   const app = express();
 
-  app.set("port", process.env.PORT || 9000);
+  app.set("port", config.port || 9000);
 
   // Set up Handlebars for server-side templates
   app.engine('handlebars', exphbs());
