@@ -83,3 +83,6 @@ send done will also be sent to all other players so that they can be shamed for 
 * Better UI
 * General code clean-up
 * Tests
+
+## License
+This is free and unencumbered public domain software. For more information, see unlicense.org or the accompanying UNLICENSE file.
