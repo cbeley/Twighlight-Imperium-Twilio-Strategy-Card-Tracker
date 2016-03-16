@@ -1,0 +1,8 @@
+<h1>{{gameId}}</h1>
+Text 'join {{gameId}} Your Name' to {{joinNumber}} to join the game!<br />
+
+currentCard: {{currentCard}} <br />
+currentPlayer: {{currentPlayer}} <br />
+{{#each players}}
+   {{name}}({{number}}) is {{done}}<br />
+{{/each}}
