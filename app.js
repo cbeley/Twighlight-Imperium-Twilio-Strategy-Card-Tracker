@@ -1,4 +1,5 @@
 const express = require('express');
+const exphbs = require('express-handlebars');
 const errorhandler = require('errorhandler');
 const bodyParser = require('body-parser');
 
@@ -8,6 +9,10 @@ module.exports = function () {
   const app = express();
 
   app.set("port", process.env.PORT || 9000);
+
+  // Set up Handlebars for server-side templates
+  app.engine('handlebars', exphbs());
+  app.set('view engine', 'handlebars');
 
   // Middleware
   if (process.env.ENVIRONMENT === "development"){

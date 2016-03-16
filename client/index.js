@@ -1,15 +1,32 @@
 const GameModel = require('./GameModel');
 const GameView = require('./GameView');
 
+/**
+ * Retrieve the inlined server data, unescape HTML entities, and parse as JSON.
+ */
+function retrieveServerData(){
+   const inlineData = document.querySelector('#inline-data').textContent;
+   const parsingElement = document.createElement('textarea');
+   parsingElement.innerHTML = inlineData;
+   
+   try {
+      return JSON.parse(parsingElement.value);
+   } catch (ex){
+      console.log('Something went wrong parsing server data...');
+      return {};
+   }
+}
 
-let model = new GameModel();
-let view = new GameView({model: model});
-window.document.body.appendChild(view.el);
+const model = new GameModel();
+const view = new GameView({model: model});
+const gameId = retrieveServerData().gameId;
+
+document.body.appendChild(view.el);
 
 window.setInterval(() => {
    model.fetch({
       data: {
-         gameId: 'newGame',
+         gameId: gameId,
       },
 
       error(){
