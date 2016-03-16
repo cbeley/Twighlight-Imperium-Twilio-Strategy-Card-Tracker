@@ -24,6 +24,9 @@ Before running this, you'll have to set up your enviornment and build all client
 
 ```
 npm install
+cd client
+npm install
+cd ..
 npm run build
 ```
 
