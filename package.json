@@ -1,0 +1,32 @@
+{
+  "name": "twiglight-imperium-twilio-strategy-card-tracker",
+  "version": "1.0.0",
+  "description": "Keep people on track and focused with strategy cards!",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "debug": "^2.2.0",
+    "express": "^4.13.4",
+    "twilio": "^2.9.0",
+    "xml": "^1.0.1"
+  },
+  "devDependencies": {
+    "babelify": "^7.2.0",
+    "browserify": "^13.0.0",
+    "errorhandler": "^1.4.3",
+    "ngrok": "^2.1.6"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cbeley/Twighlight-Imperium-Twilio-Strategy-Card-Tracker.git"
+  },
+  "author": "Christopher Beley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cbeley/Twighlight-Imperium-Twilio-Strategy-Card-Tracker/issues"
+  },
+  "homepage": "https://github.com/cbeley/Twighlight-Imperium-Twilio-Strategy-Card-Tracker#readme"
+}

@@ -1,0 +1,14 @@
+const http = require('http');
+const debug = require('debug')('TI Server');
+const ngrok = require('ngrok');
+
+const app = require('../app.js')();
+
+ngrok.connect(app.get('port'), (error, url) => {
+   http.createServer(app).listen(app.get('port'), function () {
+     debug('[info] TI Server running on port ' + app.get('port'));
+     debug('[info] TI Server running extenerally on ' + url + ':' + app.get('port'));
+     debug('[info] TI Server twilio handler at ' + url 
+         + ':' + app.get('port') + '/twilio-handler');
+   });
+});
