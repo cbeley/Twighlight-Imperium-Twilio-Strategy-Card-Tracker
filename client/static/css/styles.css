@@ -1,0 +1,13 @@
+/* Adopting BEM for styling.  --> https://css-tricks.com/bem-101/ */
+
+.game-view__h1, .game-view__h2 {
+   text-align: center;
+}
+
+.player-list__player--done {
+   color: #1C9142;
+}
+
+.player-list__player--not-done {
+   color: #E64531;
+}

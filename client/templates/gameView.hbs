@@ -1,8 +1,26 @@
-<h1>{{gameId}}</h1>
-Text 'join {{gameId}} Your Name' to {{joinNumber}} to join the game!<br />
+<div class="game-view">
+   <h1 class="game-view__h1">{{gameId}}</h1>
+   <h2 class="game-view__h2">Text 'join {{gameId}} Your Name' to {{joinNumber}} to join the game!<h2>
 
-currentCard: {{currentCard}} <br />
-currentPlayer: {{currentPlayer}} <br />
-{{#each players}}
-   {{name}}({{number}}) is {{done}}<br />
-{{/each}}
+   <div class="game-status">
+      {{#if currentCard}}
+         <ul>
+            <li>Current Card: {{currentCard}} </li>
+            <li>Current Player: {{currentPlayer}} </li>
+         </ul>
+      {{else}}
+         <div class="game-status__no-card">No strategy card in play!<h3>
+      {{/if}}
+   </div>
+
+   <ul class="player-list">
+      {{#each players}}
+         <li class="player-list__player player-list__player--{{#if done}}done{{else}}not-done{{/if}}">{{name}}({{number}}) is 
+         {{#if done}}
+            done!
+         {{else}}
+            not done.
+         {{/if}}</li>
+      {{/each}}
+   </ul>
+</div>
