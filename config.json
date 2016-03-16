@@ -1,0 +1,9 @@
+{
+   "twilio": {
+      "accountSid": "*****",
+      "authToken": "******",
+      "phoneNumber": "Enter your full phone number from twilio here",
+      "friendlyPhone": "Enter a formated version of your twilio number here"
+   },
+   "port": 8000
+}

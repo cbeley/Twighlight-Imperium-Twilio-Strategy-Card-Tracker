@@ -12,8 +12,7 @@ module.exports = {
       if (!game) return utilities.sendError(res, 'gameId not available');
 
       res.send({
-         success: true,
-         phone: 'TODO'
+         success: true
       });
    },
 
