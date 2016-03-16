@@ -64,7 +64,7 @@ Where trade can be whatever you want.  All players will be then notified and the
 
 When a player is done doing whatever they need to do with the strategy card, they simply text:
 
-``
+```
 done
 ```
 
@@ -72,7 +72,9 @@ Once all players are done, all players will be notified that the strategy card i
 send done will also be sent to all other players so that they can be shamed for being too slow. :-P
 
 ## Screenshots
-TODO
+![sms](docs/imgs/sms.png?raw=true)
+![No Active Card](docs/imgs/web-no-card.png?raw=true)
+![Active Card](docs/imgs/web-active-card.png?raw=true)
 
 ## TODO/Limitations
 * Send users the text of the card
